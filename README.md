@@ -1,3 +1,7 @@
+**NAME : Chandru M**
+
+**REG NO : 212224230041**
+
 # Ex. No:1b 			Study of Client Server Chat Applications
 
 ## Aim: 
