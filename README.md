@@ -1,7 +1,3 @@
-**NAME : Chandru M**
-
-**REG NO : 212224230041**
-
 # Ex. No:1b 			Study of Client Server Chat Applications
 
 ## Aim: 
@@ -77,6 +73,46 @@ Client-server chat applications are versatile tools that facilitate real-time co
 
 Client-server chat applications are foundational to real-time communication over networks. They incorporate principles of socket programming, communication protocols, and security mechanisms to provide a seamless user experience. Understanding the basics of client-server chat applications is essential for developers involved in networked application development, as they form the backbone of various collaborative communication systems. As technology evolves, chat applications continue to adapt, incorporating new features and technologies to enhance user interaction and connectivity.
 
+## NAME : Chandru M
+
+## REG NO : 212224230041
+
+## program:
+```python
+1.Client
+import socket
+s=socket.socket()
+s.bind(('localhost',8000))
+s.listen(5)
+c,addr=s.accept()
+while True:
+    i=input("Enter a data: ")
+    c.send(i.encode())
+    ack=c.recv(1024).decode()
+    if ack:
+        print(ack)
+        continue
+    else:
+        c.close()
+        break
+```
+```python
+2.Server
+import socket
+s=socket.socket()
+s.connect(('localhost',9000))
+while True:
+    print(s.recv(1024).decode())
+    s.send("Acknowledgment Recived".encode())
+```
+## Output:
+1.Client
+
+![image](https://github.com/user-attachments/assets/f98bb04b-7072-49d6-af6b-dedf76d531c6)
+
+2.Server:
+
+![image](https://github.com/user-attachments/assets/477458be-3c05-496e-832a-aa4d5fa025ee)
 
 ## Result:
 
